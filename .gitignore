@@ -1,0 +1,27 @@
+node_modules/
+
+# Anchored to the repo root on purpose. An unanchored `build/` also matches
+# .claude/skills/build/, which silently excluded the build skill from version
+# control — the same class of loss that took src/ with it.
+/build/
+/dist/
+/storybook-static/
+
+.DS_Store
+*.log
+
+# Secrets. Nothing here should ever reach a public repo — and this repo is
+# public. Deploy credentials for the staging host will land in one of these.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.npmrc
+.netrc
+secrets.json
+*.local.json
+.vercel
+
+# npm pack output — a build artefact, never committed
+*.tgz

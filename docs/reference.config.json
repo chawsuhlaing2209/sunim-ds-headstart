@@ -1,0 +1,9 @@
+{
+  "_comment": "REPLACE ALL FOUR URLS BELOW BEFORE YOU BUILD THE SITE. Everything the generated site needs to know that is not in the repo. storybookUrl is where components actually render — every page deep-links and embeds into it, so a wrong value produces a site full of dead links and blank frames rather than a build error. Check it opens before you ship. In development the frames need a Storybook that is not sending frame-ancestors: `npm run docs:dev` passes --storybook http://localhost:6006 for exactly that. If siteUrl and storybookUrl end up on different origins, the deployed frames stay blank until Storybook's CSP names this site — start/embedding says how.",
+  "title": "Your Design System",
+  "description": "What each component is for, when not to use it, and what the version number promises.",
+  "siteUrl": "https://your-reference-site.vercel.app",
+  "storybookUrl": "https://your-storybook.vercel.app",
+  "repoUrl": "https://github.com/your-account/your-repo",
+  "vercelProject": "your-reference-site"
+}

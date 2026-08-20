@@ -1,0 +1,6 @@
+{
+  "_comment": "What the board said when 📝 Doc Generator last read it. Evidence, not configuration. scripts/generate-docs.mjs refuses to publish a page for any component that is not Completed here, and refuses again if the component's own directory has a commit newer than readAt, because the status recorded here would then predate the change. scripts/release.mjs reads the same file to decide what is in a release, and reads `verdict` to say which candidates nobody has gated. Regenerate it by running the doc-generator agent, which has the Airtable connection; a build script deliberately does not. Names and statuses only: no base, table or record IDs. This file is tracked and the repo is public.",
+  "readAt": null,
+  "readBy": null,
+  "components": {}
+}
