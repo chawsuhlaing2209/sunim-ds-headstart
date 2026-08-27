@@ -53,6 +53,14 @@ says what the number will promise.
 file is gitignored on purpose — this repo is public, and a tracked file naming
 your base is a map for anyone holding a leaked token.
 
+**4 · The operating model.** `governance/operating-model.md` ships blank: who reviews,
+who can stop the fleet when you are away, and what happens when a bug is found in
+production. Twenty minutes, and it is the only part of this repo that cannot be derived
+from the code. Then run drills 1, 2 and 3 from `governance/drills.md` — drill 3 pulls
+the kill switch for real, which is the only way to find out it works.
+
+Start at [`governance/README.md`](governance/README.md).
+
 ## The rules the crew works by
 
 - `CLAUDE.md` — how components are built here, and what agents may not do
@@ -61,6 +69,10 @@ your base is a map for anyone holding a leaked token.
 - `decisions.md` — rulings a human has made. Empty until you make one
 - `.claude/skills/registry/SKILL.md` — the board contract: tables, column owners,
   and the formula that derives status
+- `governance/` — how much each agent is allowed to do, why, and how to stop it.
+  `fleet.md` ships filled in for these six agents; `operating-model.md` ships blank
+- `.claude/rules/<path>/trust-level.md` — six paths where an agent gets less
+  authority than its level says, each with the reason
 
 One rule sits above the rest: **the registry records evidence, never intention.**
 A link goes in after the thing it points at exists and opens. A status is derived

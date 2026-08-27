@@ -64,7 +64,21 @@ registry: one agent writes evidence, a formula derives a status, and the next ag
 up the rows carrying its status. An agent that writes into a column it does not own has
 broken the handoff for everyone downstream.
 
+**How much each agent is allowed to do is written down, in `governance/`.** Its level,
+what it may write, what checks it, and how to stop it — one row per agent in
+`governance/fleet.md`, and the reasoning behind each level in `governance/decisions.md`.
+Start at `governance/README.md`.
 
+**No agent edits anything in `governance/`.** Its own level, scope and kill switch are
+recorded there; an agent that can raise its own level has no level. The same applies to
+`.claude/agents/` — no agent edits the file that constrains it. An agent that disagrees
+with a level opens a PR with the evidence and a human merges it.
+
+Six paths give an agent *less* authority than its level says, each for a stated reason.
+They are in `.claude/rules/<path>/trust-level.md`, and they are read automatically when
+work touches that path. `tokens/` and `build/` because one is the design source and the
+other is generated; `.claude/` and `.github/workflows/` because an agent that can write
+there can restore its own access or reach a publish secret.
 
 ## Rulings
 
